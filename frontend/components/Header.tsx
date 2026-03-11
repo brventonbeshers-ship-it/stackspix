@@ -1,0 +1,21 @@
+'use client'
+
+import ConnectWallet from './ConnectWallet'
+
+export default function Header() {
+  return (
+    <header className="flex items-center justify-between px-6 py-4 border-b border-white/10 backdrop-blur-sm bg-black/30 sticky top-0 z-50">
+      <div className="flex items-center gap-3">
+        <div className="w-7 h-7 rounded-md bg-gradient-to-br from-purple-500 to-indigo-600 grid grid-cols-3 gap-px p-1">
+          {Array.from({ length: 9 }).map((_, i) => (
+            <div key={i} className="rounded-sm bg-white/80" />
+          ))}
+        </div>
+        <span className="text-lg font-bold tracking-tight text-white">
+          Stacks<span className="text-purple-400">Pix</span>
+        </span>
+      </div>
+      <ConnectWallet />
+    </header>
+  )
+}
