@@ -21,6 +21,7 @@ interface Props {
 export default function PixelCanvas({ board, selectedColor, connected, onHover, onPlaced }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [placing, setPlacing] = useState(false)
+  const [optimistic, setOptimistic] = useState<Map<string, string>>(new Map())
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -33,14 +34,15 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
     for (let y = 0; y < GRID_SIZE; y++) {
       for (let x = 0; x < GRID_SIZE; x++) {
         const pixel = board[y]?.[x]
-        ctx.fillStyle = pixel ? `#${pixel.color}` : '#1a1a2e'
+        const optColor = optimistic.get(`${x},${y}`)
+        ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#1a1a2e'
         ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
         ctx.strokeStyle = 'rgba(255,255,255,0.04)'
         ctx.lineWidth = 0.5
         ctx.strokeRect(x * CELL, y * CELL, CELL, CELL)
       }
     }
-  }, [board])
+  }, [board, optimistic])
 
   const getCellFromEvent = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current!.getBoundingClientRect()
@@ -62,15 +64,22 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
     if (x < 0 || x >= GRID_SIZE || y < 0 || y >= GRID_SIZE) return
 
     setPlacing(true)
+    const capturedX = x
+    const capturedY = y
+    const capturedColor = selectedColor
     try {
       await openContractCall({
         network,
         contractAddress: CONTRACT_ADDRESS,
         contractName: CONTRACT_NAME,
         functionName: 'place-pixel',
-        functionArgs: [uintCV(x), uintCV(y), stringAsciiCV(selectedColor)],
+        functionArgs: [uintCV(capturedX), uintCV(capturedY), stringAsciiCV(capturedColor)],
         postConditions: [],
-        onFinish: () => { onPlaced(); setPlacing(false) },
+        onFinish: () => {
+          setOptimistic(prev => new Map(prev).set(`${capturedX},${capturedY}`, capturedColor))
+          setPlacing(false)
+          onPlaced()
+        },
         onCancel: () => setPlacing(false),
         userSession,
       })
