@@ -1,0 +1,30 @@
+![Stacks](https://img.shields.io/badge/Stacks-Mainnet-blueviolet) ![license](https://img.shields.io/badge/license-MIT-blue)
+
+
+
+## Contract Details
+
+| Property | Value |
+|---|---|
+| Network | Stacks Mainnet |
+| Address | `SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM` |
+| Name | `stackspix` |
+| Grid | 50 x 50 (2,500 pixels) |
+| Explorer | [View on Hiro](https://explorer.hiro.so/address/SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM.stackspix?chain=mainnet) |
+
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push and open a Pull Request
+
+
+## Tech Stack
+
+- **Smart Contract**: Clarity (Stacks)
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain API**: Hiro Platform
+- **Wallet**: Stacks Connect (Leather/Xverse)
