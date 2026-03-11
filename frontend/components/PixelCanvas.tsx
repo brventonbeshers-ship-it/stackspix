@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { openContractCall } from '@stacks/connect'
 import { uintCV, stringAsciiCV } from '@stacks/transactions'
-import { network, CONTRACT_ADDRESS, CONTRACT_NAME, GRID_SIZE } from '../lib/stacks'
+import { StacksMainnet } from '@stacks/network'
+import { CONTRACT_ADDRESS, CONTRACT_NAME, GRID_SIZE } from '../lib/stacks'
+const network = new StacksMainnet()
 import { Board } from '../lib/contracts'
 import { userSession } from '../hooks/useStacks'
 

@@ -1,9 +1,4 @@
-import {
-  callReadOnlyFunction,
-  cvToValue,
-  principalCV,
-} from '@stacks/transactions'
-import { network, CONTRACT_ADDRESS, CONTRACT_NAME, HIRO_API, GRID_SIZE } from './stacks'
+import { CONTRACT_ADDRESS, CONTRACT_NAME, HIRO_API, GRID_SIZE } from './stacks'
 
 export interface Pixel {
   color: string
@@ -87,15 +82,27 @@ export async function fetchBoard(): Promise<Board> {
 
 export async function fetchUserCount(address: string): Promise<number> {
   try {
-    const result = await callReadOnlyFunction({
-      network,
-      contractAddress: CONTRACT_ADDRESS,
-      contractName: CONTRACT_NAME,
-      functionName: 'get-user-count',
-      functionArgs: [principalCV(address)],
-      senderAddress: address,
-    })
-    return Number(cvToValue(result))
+    const res = await fetch(
+      `${HIRO_API}/v2/contracts/call-read/${CONTRACT_ADDRESS}/${CONTRACT_NAME}/get-user-count`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sender: address, arguments: [`0x051a${Buffer.from(address).toString('hex')}`] }),
+      }
+    )
+    // fallback: count from tx history
+    const txRes = await fetch(
+      `${HIRO_API}/extended/v1/address/${CONTRACT_ADDRESS}.${CONTRACT_NAME}/transactions?limit=200`
+    )
+    if (!txRes.ok) return 0
+    const data = await txRes.json()
+    return (data.results ?? []).filter(
+      (tx: any) =>
+        tx.tx_type === 'contract_call' &&
+        tx.contract_call?.function_name === 'place-pixel' &&
+        tx.tx_status === 'success' &&
+        tx.sender_address === address
+    ).length
   } catch {
     return 0
   }
@@ -103,15 +110,12 @@ export async function fetchUserCount(address: string): Promise<number> {
 
 export async function fetchTotalPlaced(): Promise<number> {
   try {
-    const result = await callReadOnlyFunction({
-      network,
-      contractAddress: CONTRACT_ADDRESS,
-      contractName: CONTRACT_NAME,
-      functionName: 'get-total-placed',
-      functionArgs: [],
-      senderAddress: CONTRACT_ADDRESS,
-    })
-    return Number(cvToValue(result))
+    const res = await fetch(
+      `${HIRO_API}/extended/v1/address/${CONTRACT_ADDRESS}.${CONTRACT_NAME}/transactions?limit=1`
+    )
+    if (!res.ok) return 0
+    const data = await res.json()
+    return data.total ?? 0
   } catch {
     return 0
   }
