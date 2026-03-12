@@ -25,3 +25,12 @@ export function timeAgo(date: Date): string {
   if (mins  > 0) return `${mins}m ago`;
   return 'just now';
 }
+
+
+export function pixelIndex(x: number, y: number): number {
+  return y * GRID_SIZE + x;
+}
+
+export function indexToCoord(index: number): { x: number; y: number } {
+  return { x: index % GRID_SIZE, y: Math.floor(index / GRID_SIZE) };
+}
