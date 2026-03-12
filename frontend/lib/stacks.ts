@@ -13,3 +13,15 @@ export function shortenAddress(addr: string, head = 6, tail = 4): string {
 export function formatSTX(microStx: number): string {
   return (microStx / 1_000_000).toFixed(2) + ' STX';
 }
+
+
+export function timeAgo(date: Date): string {
+  const diff = Date.now() - date.getTime();
+  const mins  = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days  = Math.floor(diff / 86400000);
+  if (days  > 0) return `${days}d ago`;
+  if (hours > 0) return `${hours}h ago`;
+  if (mins  > 0) return `${mins}m ago`;
+  return 'just now';
+}
