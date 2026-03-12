@@ -5,3 +5,8 @@ node_modules/
 dist/
 .DS_Store
 deploy.mjs
+
+# Added
+.env.local
+.env.production
+Thumbs.db
