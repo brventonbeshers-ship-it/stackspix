@@ -46,3 +46,8 @@ export function formatNumber(n: number): string {
 export function isValidHexColor(color: string): boolean {
   return /^[0-9A-Fa-f]{6}$/.test(color);
 }
+
+
+export function pluralize(n: number, word: string, plural?: string): string {
+  return `${n} ${n === 1 ? word : (plural ?? word + 's')}`;
+}
