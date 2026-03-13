@@ -33,3 +33,15 @@
 ## License
 
 MIT License.
+
+
+## FAQ
+
+**How does it work?**
+Each pixel is stored on-chain in a Clarity smart contract map.
+
+**How much does it cost?**
+Each pixel costs a small tx fee (~0.001 STX).
+
+**Can I overwrite someone else's pixel?**
+Yes, any pixel can be overwritten.

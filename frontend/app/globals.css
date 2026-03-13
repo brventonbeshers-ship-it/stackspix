@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #070c10;
+  background-color: #080d18;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -14,9 +14,9 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.29); border-radius: 2px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -97,4 +97,11 @@ html { scroll-behavior: smooth; }
 ::selection {
   background: rgba(168, 85, 247, 0.3);
   color: #f5f3ff;
+}
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
 }
