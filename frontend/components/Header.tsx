@@ -11,8 +11,8 @@ export default function Header() {
             <div key={i} className="rounded-sm bg-white/80" />
           ))}
         </div>
-        <span className="text-base font-bold tracking-tight text-white">
-          Stacks<span className="text-indigo-300">Pix</span>
+        <span className="text-xl font-bold tracking-tight text-white">
+          Stacks<span className="text-indigo-400">Pix</span>
         </span>
       </div>
       <ConnectWallet />
