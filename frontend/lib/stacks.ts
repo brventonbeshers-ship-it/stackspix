@@ -34,3 +34,10 @@ export function pixelIndex(x: number, y: number): number {
 export function indexToCoord(index: number): { x: number; y: number } {
   return { x: index % GRID_SIZE, y: Math.floor(index / GRID_SIZE) };
 }
+
+
+export function formatNumber(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+  if (n >= 1_000)     return (n / 1_000).toFixed(1) + 'K';
+  return n.toLocaleString();
+}
