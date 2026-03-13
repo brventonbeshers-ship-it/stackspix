@@ -43,7 +43,7 @@ export default function StatsPanel({ total, userCount, hoveredPixel }: Props) {
           </div>
           {hoveredPixel.owner && (
             <div className="text-xs font-mono text-gray-500 truncate">
-              {hoveredPixel.owner.slice(0, 6)}...
+              {hoveredPixel.owner.slice(0, 10)}...
             </div>
           )}
         </div>
