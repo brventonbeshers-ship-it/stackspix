@@ -30,7 +30,7 @@ export default function StatsPanel({ total, userCount, hoveredPixel }: Props) {
 
       {hoveredPixel && (
         <div className="bg-white/5 rounded-lg p-3 border border-white/10 space-y-1.5">
-          <div className="text-xs text-gray-400 font-semibold uppercase tracking-widest">Details</div>
+          <div className="text-xs text-gray-400 font-semibold uppercase tracking-widest">Inspector</div>
           <div className="text-xs font-mono text-gray-300">
             x: {hoveredPixel.x}, y: {hoveredPixel.y}
           </div>
