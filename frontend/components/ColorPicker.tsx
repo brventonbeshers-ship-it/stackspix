@@ -24,7 +24,7 @@ export default function ColorPicker({ selected, onSelect, customColor, onCustomC
             key={c}
             title={`#${c}`}
             onClick={() => onSelect(c)}
-            className={`w-7 h-7 rounded-md transition-all ${
+            className={`w-8 h-8 rounded-md transition-all ${
               selected === c ? 'ring-2 ring-white ring-offset-2 ring-offset-gray-900 scale-110' : 'hover:scale-105'
             }`}
             style={{ backgroundColor: `#${c}` }}
