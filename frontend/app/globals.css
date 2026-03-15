@@ -131,3 +131,12 @@ html { scroll-behavior: smooth; }
   background: rgba(168, 85, 247, 0.3);
   color: #f5f3ff;
 }
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
