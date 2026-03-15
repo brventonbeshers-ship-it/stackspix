@@ -51,3 +51,12 @@ export function isValidHexColor(color: string): boolean {
 export function pluralize(n: number, word: string, plural?: string): string {
   return `${n} ${n === 1 ? word : (plural ?? word + 's')}`;
 }
+
+
+export function getContrastColor(hex: string): string {
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.5 ? '000000' : 'FFFFFF';
+}
