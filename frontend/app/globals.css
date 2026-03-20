@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #060b1c;
+  background-color: #0c0d14;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -216,4 +216,20 @@ html { scroll-behavior: smooth; }
 }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
+}
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
 }
