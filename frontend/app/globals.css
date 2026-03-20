@@ -209,3 +209,11 @@ html { scroll-behavior: smooth; }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
 }
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
