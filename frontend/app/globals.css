@@ -292,3 +292,10 @@ html { scroll-behavior: smooth; }
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* ─── Pulse border ─── */
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(168,85,247,0.4); }
+  50%       { border-color: rgba(168,85,247,0.9); }
+}
+.pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
