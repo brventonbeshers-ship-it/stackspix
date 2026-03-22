@@ -14,17 +14,17 @@ export default function StatsPanel({ total, userCount, hoveredPixel }: Props) {
       <div className="flex flex-col gap-2">
         <div className="bg-white/5 rounded-lg p-3 border border-white/10">
           <div className="text-2xl font-bold text-white">{total.toLocaleString()}</div>
-          <div className="text-xs text-gray-500 mt-0.5">Total placements</div>
+          <div className="text-xs text-gray-500 mt-0.5">Pixels placed total</div>
         </div>
 
         <div className="bg-white/5 rounded-lg p-3 border border-white/10">
           <div className="text-2xl font-bold text-purple-400">{userCount.toLocaleString()}</div>
-          <div className="text-xs text-gray-500 mt-0.5">Pixels by you</div>
+          <div className="text-xs text-gray-500 mt-0.5">Your pixels</div>
         </div>
 
         <div className="bg-white/5 rounded-lg p-3 border border-white/10">
           <div className="text-2xl font-bold text-indigo-400">2,500</div>
-          <div className="text-xs text-gray-500 mt-0.5">Grid capacity</div>
+          <div className="text-xs text-gray-500 mt-0.5">Available cells</div>
         </div>
       </div>
 
