@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0c090f;
+  background-color: #0a0616;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -378,4 +378,10 @@ html { scroll-behavior: smooth; }
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: #f5f3ff;
 }
