@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0e0715;
+  background-color: #0a0712;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.10); border-radius: 4px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -392,4 +392,19 @@ html { scroll-behavior: smooth; }
 }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
+}
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
 }
