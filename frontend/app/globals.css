@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.23); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.27); border-radius: 3px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
