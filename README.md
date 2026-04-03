@@ -395,3 +395,12 @@ Each pixel costs a small tx fee (~0.001 STX).
 
 **Can I overwrite someone else's pixel?**
 Yes, any pixel can be overwritten.
+
+
+## Tech Stack
+
+- **Smart Contract**: Clarity (Stacks)
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain API**: Hiro Platform
+- **Wallet**: Stacks Connect (Leather/Xverse)
