@@ -12,24 +12,24 @@ export default function StatsPanel({ total, userCount, hoveredPixel }: Props) {
       <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Stats</h3>
 
       <div className="flex flex-col gap-2">
-        <div className="bg-white/5 rounded-2xl p-3 border border-white/10">
+        <div className="bg-white/5 rounded-xl p-3 border border-white/10">
           <div className="text-2xl font-bold text-white">{total.toLocaleString()}</div>
           <div className="text-xs text-gray-500 mt-0.5">Total pixels placed</div>
         </div>
 
-        <div className="bg-white/5 rounded-2xl p-3 border border-white/10">
+        <div className="bg-white/5 rounded-xl p-3 border border-white/10">
           <div className="text-2xl font-bold text-purple-400">{userCount.toLocaleString()}</div>
           <div className="text-xs text-gray-500 mt-0.5">Pixels by you</div>
         </div>
 
-        <div className="bg-white/5 rounded-2xl p-3 border border-white/10">
+        <div className="bg-white/5 rounded-xl p-3 border border-white/10">
           <div className="text-2xl font-bold text-indigo-400">2,500</div>
           <div className="text-xs text-gray-500 mt-0.5">Total cells (50x50)</div>
         </div>
       </div>
 
       {hoveredPixel && (
-        <div className="bg-white/5 rounded-2xl p-3 border border-white/10 space-y-1.5">
+        <div className="bg-white/5 rounded-xl p-3 border border-white/10 space-y-1.5">
           <div className="text-xs text-gray-400 font-semibold uppercase tracking-widest">Details</div>
           <div className="text-xs font-mono text-gray-300">
             x: {hoveredPixel.x}, y: {hoveredPixel.y}
@@ -43,7 +43,7 @@ export default function StatsPanel({ total, userCount, hoveredPixel }: Props) {
           </div>
           {hoveredPixel.owner && (
             <div className="text-xs font-mono text-gray-500 truncate">
-              {hoveredPixel.owner.slice(0, 8)}...
+              {hoveredPixel.owner.slice(0, 9)}...
             </div>
           )}
         </div>
