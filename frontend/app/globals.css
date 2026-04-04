@@ -824,3 +824,9 @@ html { scroll-behavior: smooth; }
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
