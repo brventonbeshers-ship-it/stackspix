@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0c0a18;
+  background-color: #0c0911;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -777,3 +777,10 @@ html { scroll-behavior: smooth; }
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+/* ─── Pulse border ─── */
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(168,85,247,0.4); }
+  50%       { border-color: rgba(168,85,247,0.9); }
+}
+.pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
