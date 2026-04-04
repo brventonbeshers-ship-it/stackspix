@@ -404,3 +404,8 @@ Yes, any pixel can be overwritten.
 - **Styling**: Tailwind CSS
 - **Blockchain API**: Hiro Platform
 - **Wallet**: Stacks Connect (Leather/Xverse)
+
+
+## License
+
+MIT License.
