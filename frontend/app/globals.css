@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0c0911;
+  background-color: #080916;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -838,4 +838,11 @@ html { scroll-behavior: smooth; }
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Glass panel ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
