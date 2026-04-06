@@ -518,3 +518,15 @@ npm start
 ```
 
 Deployed via Vercel with root directory set to `frontend`.
+
+
+## Deployment
+
+```bash
+cd frontend
+npm install
+npm run build
+npm start
+```
+
+Deployed via Vercel with root directory set to `frontend`.
