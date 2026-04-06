@@ -934,3 +934,10 @@ html { scroll-behavior: smooth; }
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 10px 10px;
 }
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
