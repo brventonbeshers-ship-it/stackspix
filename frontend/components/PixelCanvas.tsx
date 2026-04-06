@@ -9,7 +9,7 @@ const network = new StacksMainnet()
 import { Board } from '../lib/contracts'
 import { userSession } from '../hooks/useStacks'
 
-const CELL = 9
+const CELL = 10
 const CANVAS_SIZE = GRID_SIZE * CELL // 500px
 
 interface Props {
