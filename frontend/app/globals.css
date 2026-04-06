@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.16); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 2px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -997,3 +997,11 @@ html { scroll-behavior: smooth; }
   50%       { border-color: rgba(168,85,247,0.9); }
 }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
