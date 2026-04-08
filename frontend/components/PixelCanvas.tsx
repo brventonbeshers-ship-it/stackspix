@@ -40,7 +40,7 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
         ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#1c1c30'
         ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
         ctx.strokeStyle = 'rgba(255,255,255,0.19)'
-        ctx.lineWidth = 0.3
+        ctx.lineWidth = 0.5
         ctx.strokeRect(x * CELL, y * CELL, CELL, CELL)
       }
     }
