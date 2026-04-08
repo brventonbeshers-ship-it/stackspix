@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #080b1c;
+  background-color: #080d17;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -1110,4 +1110,11 @@ html { scroll-behavior: smooth; }
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
