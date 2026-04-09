@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.23); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.09); border-radius: 2px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -1117,4 +1117,12 @@ html { scroll-behavior: smooth; }
   outline: 2px solid rgba(168, 85, 247, 0.7);
   outline-offset: 2px;
   border-radius: 6px;
+}
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
 }
