@@ -1186,3 +1186,9 @@ html { scroll-behavior: smooth; }
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
 }
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
