@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Collaborative pixel canvas on Stacks. Every pixel is a real on-chain transaction.',
   openGraph: {
     title: 'StacksPix',
-    description: 'On-chain pixel art powered by Stacks.',
+    description: 'Collaborative pixel canvas on Stacks.',
     images: ['/og.png'],
   },
   other: {
