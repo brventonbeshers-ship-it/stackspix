@@ -1,0 +1,23 @@
+{
+  "name": "stacks-pix-sdk",
+  "version": "1.0.1",
+  "description": "TypeScript SDK for interacting with the StacksPix pixel board smart contract on Stacks blockchain",
+  "main": "sdk/dist/index.js",
+  "types": "sdk/dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brventonbeshers-ship-it/stackspix"
+  },
+  "keywords": [
+    "stacks",
+    "blockchain",
+    "pixels",
+    "clarity",
+    "smart-contract",
+    "sdk",
+    "web3",
+    "typescript"
+  ],
+  "author": "brventonbeshers-ship-it",
+  "license": "MIT"
+}
