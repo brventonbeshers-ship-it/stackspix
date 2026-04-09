@@ -1221,3 +1221,10 @@ html { scroll-behavior: smooth; }
 .text-glow-indigo {
   text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
 }
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
