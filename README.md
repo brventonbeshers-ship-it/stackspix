@@ -632,3 +632,8 @@ Each pixel costs a small tx fee (~0.001 STX).
 
 **Can I overwrite someone else's pixel?**
 Yes, any pixel can be overwritten.
+
+
+## License
+
+MIT License.
