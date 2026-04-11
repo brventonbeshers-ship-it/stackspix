@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/stacks-pix-sdk?color=blueviolet) ![Stacks Mainnet](https://img.shields.io/badge/Stacks-Mainnet-blueviolet) ![license](https://img.shields.io/badge/license-MIT-blue)
+[![npm](https://img.shields.io/npm/v/stacks-pix-sdk?color=blueviolet)](https://www.npmjs.com/package/stacks-pix-sdk) ![Stacks Mainnet](https://img.shields.io/badge/Stacks-Mainnet-blueviolet) ![license](https://img.shields.io/badge/license-MIT-blue)
 
 
 
