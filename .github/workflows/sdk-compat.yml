@@ -27,11 +27,9 @@ jobs:
         run: npm install stacks-pix-sdk --no-save
 
       - name: Verify module loads
-        continue-on-error: true
         run: node -e "const pix = require('stacks-pix-sdk'); console.log('stacks-pix-sdk loaded, exports:', Object.keys(pix));"
 
       - name: Exercise SDK API
-        continue-on-error: true
         run: |
           node -e "
             const sdk = require('stacks-pix-sdk');
@@ -64,7 +62,6 @@ jobs:
           npm install stacks-pix-sdk
 
       - name: Smoke test
-        continue-on-error: true
         run: |
           cd /tmp/pix-run-${{ matrix.num }}
           node -e "require('stacks-pix-sdk'); console.log('#${{ matrix.num }} passed');"
