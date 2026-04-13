@@ -1829,3 +1829,11 @@ html { scroll-behavior: smooth; }
     0 0 30px rgba(168, 85, 247, 0.15),
     0 0 60px rgba(99, 102, 241, 0.08);
 }
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
