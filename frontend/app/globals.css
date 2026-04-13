@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #060615;
+  background-color: #060e1c;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -1811,4 +1811,12 @@ html { scroll-behavior: smooth; }
 }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
+}
+
+/* ─── Pixel grid pattern ─── */
+.bg-pixel-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
