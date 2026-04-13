@@ -9,7 +9,7 @@ const network = new StacksMainnet()
 import { Board } from '../lib/contracts'
 import { userSession } from '../hooks/useStacks'
 
-const CELL = 11
+const CELL = 8
 const CANVAS_SIZE = GRID_SIZE * CELL // 500px
 
 interface Props {
@@ -37,7 +37,7 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
       for (let x = 0; x < GRID_SIZE; x++) {
         const pixel = board[y]?.[x]
         const optColor = optimistic.get(`${x},${y}`)
-        ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#16162a'
+        ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#1a1a2e'
         ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
         ctx.strokeStyle = 'rgba(255,255,255,0.14)'
         ctx.lineWidth = 0.7
@@ -107,16 +107,16 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
         />
         {placing && (
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-sm">
-            <div className="text-white text-sm font-mono animate-pulse">Placing pixel...</div>
+            <div className="text-white text-sm font-mono animate-pulse">Sending pixel...</div>
           </div>
         )}
         {!connected && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center backdrop-blur-sm">
-            <div className="text-gray-300 text-sm font-mono">Sign in to paint pixels</div>
+            <div className="text-gray-300 text-sm font-mono">Link wallet to place pixels</div>
           </div>
         )}
       </div>
-      <div className="text-xs text-gray-600 font-mono">2,500 pixels — all stored on-chain</div>
+      <div className="text-xs text-gray-600 font-mono">50x50 grid — every pixel lives on Stacks</div>
     </div>
   )
 }
