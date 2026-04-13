@@ -1706,3 +1706,11 @@ html { scroll-behavior: smooth; }
 .text-glow-indigo {
   text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
 }
+
+/* ─── Pixel grid pattern ─── */
+.bg-pixel-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
