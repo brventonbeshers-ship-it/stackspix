@@ -1,7 +1,28 @@
+import {
+  StacksPixClient,
+  GRID_SIZE as SDK_GRID_SIZE,
+  MAX_INDEX,
+} from "stacks-pix-sdk";
+export type { PixelData, UserStats, StacksPixConfig } from "stacks-pix-sdk";
+
 export const CONTRACT_ADDRESS = 'SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM'
 export const CONTRACT_NAME = 'stackspix'
-export const GRID_SIZE = 50
+export const GRID_SIZE = SDK_GRID_SIZE
 export const HIRO_API = 'https://api.hiro.so'
+export { MAX_INDEX }
+
+const client = new StacksPixClient({
+  contractAddress: CONTRACT_ADDRESS,
+  contractName: CONTRACT_NAME,
+  network: "mainnet",
+});
+
+export const getPixel = (x: number, y: number) => client.getPixel(x, y);
+export const getPixelByIndex = (index: number) => client.getPixelByIndex(index);
+export const getUserStats = (address: string) => client.getUserStats(address);
+export const getTotalPlaced = () => client.getTotalPlaced();
+export const getPlacePixelArgs = (x: number, y: number, color: string) =>
+  client.getPlacePixelArgs(x, y, color);
 
 
 export function shortenAddress(addr: string, head = 6, tail = 4): string {
