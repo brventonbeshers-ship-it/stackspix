@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #080918;
+  background-color: #0e061c;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.26); border-radius: 6px; }
 
@@ -1695,4 +1695,22 @@ html { scroll-behavior: smooth; }
   background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.08) 50%, transparent 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* marker-globals: 1776060748150 */
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+/* ─── Pixel grid pattern ─── */
+.bg-pixel-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
