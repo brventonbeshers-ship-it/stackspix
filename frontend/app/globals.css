@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.26); border-radius: 3px; }
 
@@ -1973,3 +1973,12 @@ html { scroll-behavior: smooth; }
 .animate-slide-up { animation: slideUp 0.4s ease-out; }
 
 /* marker-globals: 1776183973853 */
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
