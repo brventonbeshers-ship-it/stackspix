@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.30); border-radius: 6px; }
 
@@ -1863,4 +1863,28 @@ html { scroll-behavior: smooth; }
 }
 .text-glow-indigo {
   text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: #f5f3ff;
+}
+
+/* ─── Shimmer ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.08) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
