@@ -2131,3 +2131,9 @@ html { scroll-behavior: smooth; }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
 
 /* marker-globals: 1776267568686 */
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
