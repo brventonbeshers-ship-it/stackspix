@@ -39,8 +39,8 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
         const optColor = optimistic.get(`${x},${y}`)
         ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#1a1a2e'
         ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
-        ctx.strokeStyle = 'rgba(255,255,255,0.15)'
-        ctx.lineWidth = 1
+        ctx.strokeStyle = 'rgba(255,255,255,0.23)'
+        ctx.lineWidth = 0.5
         ctx.strokeRect(x * CELL, y * CELL, CELL, CELL)
       }
     }
