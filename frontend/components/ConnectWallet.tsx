@@ -24,7 +24,7 @@ export default function ConnectWallet() {
   return (
     <button
       onClick={connect}
-      className="px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-violet-400 hover:to-violet-500 text-white transition-all shadow-lg shadow-purple-900/30"
+      className="px-4 py-2 text-sm font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-purple-500 text-white transition-all shadow-lg shadow-purple-900/30"
     >
       Link Wallet
     </button>
