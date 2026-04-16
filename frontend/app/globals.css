@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.09); border-radius: 4px; }
 
@@ -2317,3 +2317,5 @@ html { scroll-behavior: smooth; }
     0 0 30px rgba(168, 85, 247, 0.15),
     0 0 60px rgba(99, 102, 241, 0.08);
 }
+
+/* marker-globals: 1776370806687 */
