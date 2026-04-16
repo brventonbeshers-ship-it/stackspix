@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #070915;
+  background-color: #0a0d1a;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -2309,4 +2309,11 @@ html { scroll-behavior: smooth; }
 ::selection {
   background: rgba(168, 85, 247, 0.3);
   color: #f5f3ff;
+}
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
 }
