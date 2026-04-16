@@ -2280,3 +2280,9 @@ html { scroll-behavior: smooth; }
   50%       { border-color: rgba(168,85,247,0.9); }
 }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
