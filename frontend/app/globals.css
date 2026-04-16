@@ -2172,3 +2172,31 @@ html { scroll-behavior: smooth; }
 }
 .animate-fade-in  { animation: fadeIn  0.4s ease-out; }
 .animate-slide-up { animation: slideUp 0.4s ease-out; }
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
+}
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
