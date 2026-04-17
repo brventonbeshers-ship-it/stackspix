@@ -2459,3 +2459,10 @@ html { scroll-behavior: smooth; }
 }
 
 /* marker-globals: 1776457297060 */
+
+/* ─── Glass panel ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
