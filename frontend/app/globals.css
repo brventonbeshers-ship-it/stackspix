@@ -2440,3 +2440,9 @@ html { scroll-behavior: smooth; }
     0 0 30px rgba(168, 85, 247, 0.15),
     0 0 60px rgba(99, 102, 241, 0.08);
 }
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
