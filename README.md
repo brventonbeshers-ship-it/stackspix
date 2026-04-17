@@ -1344,3 +1344,8 @@ Deployed via Vercel with root directory set to `frontend`.
 - **Styling**: Tailwind CSS
 - **Blockchain API**: Hiro Platform
 - **Wallet**: Stacks Connect (Leather/Xverse)
+
+
+## License
+
+MIT License.
