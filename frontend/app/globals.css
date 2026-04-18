@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0c0814;
+  background-color: #070611;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.10); border-radius: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.29); border-radius: 5px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -2588,4 +2588,10 @@ html { scroll-behavior: smooth; }
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
 }
