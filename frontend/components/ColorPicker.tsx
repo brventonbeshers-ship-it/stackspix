@@ -16,7 +16,7 @@ const PALETTE = [
 export default function ColorPicker({ selected, onSelect, customColor, onCustomChange }: Props) {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Color</h3>
+      <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Palette</h3>
 
       <div className="grid grid-cols-6 gap-1.5">
         {PALETTE.map((c) => (
@@ -24,7 +24,7 @@ export default function ColorPicker({ selected, onSelect, customColor, onCustomC
             key={c}
             title={`#${c}`}
             onClick={() => onSelect(c)}
-            className={`w-8 h-8 rounded-md transition-all ${
+            className={`w-6 h-6 rounded-md transition-all ${
               selected === c ? 'ring-2 ring-white ring-offset-2 ring-offset-gray-900 scale-110' : 'hover:scale-105'
             }`}
             style={{ backgroundColor: `#${c}` }}
@@ -33,7 +33,7 @@ export default function ColorPicker({ selected, onSelect, customColor, onCustomC
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="text-xs text-gray-500">Custom color</label>
+        <label className="text-xs text-gray-500">Custom</label>
         <div className="flex items-center gap-2">
           <input
             type="color"
