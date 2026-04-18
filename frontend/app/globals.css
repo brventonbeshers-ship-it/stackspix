@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.29); border-radius: 5px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.10); border-radius: 4px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -2667,4 +2667,11 @@ html { scroll-behavior: smooth; }
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
 }
