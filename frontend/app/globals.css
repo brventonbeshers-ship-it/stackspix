@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0a0d1c;
+  background-color: #0c0b13;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -2717,3 +2717,5 @@ html { scroll-behavior: smooth; }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
 }
+
+/* marker-globals: 1776582655701 */
