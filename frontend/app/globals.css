@@ -2738,3 +2738,11 @@ html { scroll-behavior: smooth; }
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
