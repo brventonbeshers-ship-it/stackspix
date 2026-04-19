@@ -1585,3 +1585,12 @@ MIT License.
 2. Create your feature branch
 3. Commit your changes
 4. Push and open a Pull Request
+
+
+## Tech Stack
+
+- **Smart Contract**: Clarity (Stacks)
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain API**: Hiro Platform
+- **Wallet**: Stacks Connect (Leather/Xverse)
