@@ -9,7 +9,7 @@ const network = new StacksMainnet()
 import { Board } from '../lib/contracts'
 import { userSession } from '../hooks/useStacks'
 
-const CELL = 8
+const CELL = 11
 const CANVAS_SIZE = GRID_SIZE * CELL // 500px
 
 interface Props {
@@ -39,7 +39,7 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
         const optColor = optimistic.get(`${x},${y}`)
         ctx.fillStyle = optColor ? `#${optColor}` : pixel ? `#${pixel.color}` : '#1a1a2e'
         ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
-        ctx.strokeStyle = 'rgba(255,255,255,0.09)'
+        ctx.strokeStyle = 'rgba(255,255,255,0.12)'
         ctx.lineWidth = 1
         ctx.strokeRect(x * CELL, y * CELL, CELL, CELL)
       }
