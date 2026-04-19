@@ -2801,3 +2801,31 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; }
 }
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in  { animation: fadeIn  0.4s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Pulse border ─── */
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(168,85,247,0.4); }
+  50%       { border-color: rgba(168,85,247,0.9); }
+}
+.pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
