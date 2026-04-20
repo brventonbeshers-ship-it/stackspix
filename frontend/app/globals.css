@@ -2921,3 +2921,11 @@ html { scroll-behavior: smooth; }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
 
 /* marker-globals: 1776676733946 */
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
