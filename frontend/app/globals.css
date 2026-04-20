@@ -2929,3 +2929,17 @@ html { scroll-behavior: smooth; }
 .swatch-glow:hover {
   box-shadow: 0 0 12px currentColor;
 }
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in  { animation: fadeIn  0.4s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+
+/* marker-globals: 1776698575975 */
