@@ -2958,3 +2958,12 @@ html { scroll-behavior: smooth; }
   50%       { border-color: rgba(168,85,247,0.9); }
 }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
