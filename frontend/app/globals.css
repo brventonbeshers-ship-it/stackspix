@@ -2912,3 +2912,20 @@ html { scroll-behavior: smooth; }
     0 0 30px rgba(168, 85, 247, 0.15),
     0 0 60px rgba(99, 102, 241, 0.08);
 }
+
+/* ─── Pulse border ─── */
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(168,85,247,0.4); }
+  50%       { border-color: rgba(168,85,247,0.9); }
+}
+.pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
+
+/* marker-globals: 1776676733946 */
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
