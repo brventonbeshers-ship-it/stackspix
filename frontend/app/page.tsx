@@ -33,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     reload()
-    const interval = setInterval(reload, 20_000)
+    const interval = setInterval(reload, 15_000)
     return () => clearInterval(interval)
   }, [reload])
 
@@ -118,3 +118,5 @@ export default function Home() {
 // marker-page: 1776641717451
 
 // marker-page: 1776676558427
+
+// marker-page: 1776698681655
