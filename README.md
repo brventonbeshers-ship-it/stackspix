@@ -1771,3 +1771,12 @@ Deployed via Vercel with root directory set to `frontend`.
 ## License
 
 MIT License.
+
+
+## Tech Stack
+
+- **Smart Contract**: Clarity (Stacks)
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain API**: Hiro Platform
+- **Wallet**: Stacks Connect (Leather/Xverse)
