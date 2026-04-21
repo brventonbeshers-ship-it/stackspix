@@ -3010,3 +3010,9 @@ html { scroll-behavior: smooth; }
 }
 
 /* marker-globals: 1776748818978 */
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
