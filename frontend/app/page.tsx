@@ -33,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     reload()
-    const interval = setInterval(reload, 15_000)
+    const interval = setInterval(reload, 45_000)
     return () => clearInterval(interval)
   }, [reload])
 
