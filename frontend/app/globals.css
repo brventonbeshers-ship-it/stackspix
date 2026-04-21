@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #0e0910;
+  background-color: #060d13;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.26); border-radius: 5px; }
 
@@ -3008,3 +3008,5 @@ html { scroll-behavior: smooth; }
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
+
+/* marker-globals: 1776748818978 */
