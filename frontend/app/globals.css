@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.26); border-radius: 5px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 5px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -3010,3 +3010,9 @@ html { scroll-behavior: smooth; }
 }
 
 /* marker-globals: 1776748818978 */
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
