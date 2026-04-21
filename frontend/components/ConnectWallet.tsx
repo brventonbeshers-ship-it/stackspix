@@ -9,7 +9,7 @@ export default function ConnectWallet() {
     return (
       <div className="flex items-center gap-3">
         <span className="text-xs text-gray-400 font-mono">
-          {address.slice(0, 8)}...{address.slice(-3)}
+          {address.slice(0, 7)}...{address.slice(-4)}
         </span>
         <button
           onClick={disconnect}
