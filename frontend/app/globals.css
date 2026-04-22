@@ -14,7 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 5px; }
 
@@ -3317,3 +3317,5 @@ html { scroll-behavior: smooth; }
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+/* marker-globals: 1776887007665 */
