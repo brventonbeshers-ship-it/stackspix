@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #070a1a;
+  background-color: #0a081a;
   color: #fff;
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
