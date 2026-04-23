@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.24); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.28); border-radius: 5px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -3375,4 +3375,23 @@ html { scroll-behavior: smooth; }
 .card-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
+
+/* ─── Shimmer ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.08) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ─── Pixel grid pattern ─── */
+.bg-pixel-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
