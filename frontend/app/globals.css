@@ -3367,3 +3367,12 @@ html { scroll-behavior: smooth; }
 }
 .animate-fade-in  { animation: fadeIn  0.4s ease-out; }
 .animate-slide-up { animation: slideUp 0.4s ease-out; }
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
+}
