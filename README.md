@@ -2098,3 +2098,12 @@ MIT License.
 ## License
 
 MIT License.
+
+
+## Tech Stack
+
+- **Smart Contract**: Clarity (Stacks)
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS
+- **Blockchain API**: Hiro Platform
+- **Wallet**: Stacks Connect (Leather/Xverse)
