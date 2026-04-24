@@ -107,16 +107,16 @@ export default function PixelCanvas({ board, selectedColor, connected, onHover, 
         />
         {placing && (
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-sm">
-            <div className="text-white text-sm font-mono animate-pulse">Broadcasting to Stacks...</div>
+            <div className="text-white text-sm font-mono animate-pulse">Submitting transaction...</div>
           </div>
         )}
         {!connected && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center backdrop-blur-sm">
-            <div className="text-gray-300 text-sm font-mono">Connect wallet to paint</div>
+            <div className="text-gray-300 text-sm font-mono">Link wallet to place pixels</div>
           </div>
         )}
       </div>
-      <div className="text-xs text-gray-600 font-mono">50 x 50 canvas — powered by Stacks</div>
+      <div className="text-xs text-gray-600 font-mono">2,500 pixels — all stored on-chain</div>
     </div>
   )
 }
