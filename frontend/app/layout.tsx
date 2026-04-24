@@ -5,10 +5,10 @@ import Header from '../components/Header'
 
 export const metadata: Metadata = {
   title: 'StacksPix - On-chain Pixel Board',
-  description: 'Place pixels on-chain with Stacks. Each pixel is permanently stored on the blockchain.',
+  description: 'On-chain pixel art on Stacks. Place, overwrite, and collect pixels permanently.',
   openGraph: {
     title: 'StacksPix',
-    description: 'Paint pixels on the Stacks blockchain.',
+    description: 'On-chain pixel art powered by Stacks.',
     images: ['/og.png'],
   },
   other: {
@@ -98,3 +98,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 // marker-layout: 1776959412999
 
 // marker-layout: 1776998830423
+
+// marker-layout: 1777022347898

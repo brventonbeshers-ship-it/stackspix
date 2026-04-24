@@ -16,7 +16,7 @@ body {
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.21); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.05); border-radius: 2px; }
 
 /* ─── Shimmer ─── */
 @keyframes shimmer {
@@ -3520,3 +3520,10 @@ html { scroll-behavior: smooth; }
 }
 
 /* marker-globals: 1777022284305 */
+
+/* ─── Glass panel ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
