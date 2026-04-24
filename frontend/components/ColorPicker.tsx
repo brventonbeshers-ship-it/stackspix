@@ -16,7 +16,7 @@ const PALETTE = [
 export default function ColorPicker({ selected, onSelect, customColor, onCustomChange }: Props) {
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Color</h3>
+      <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Pick Color</h3>
 
       <div className="grid grid-cols-6 gap-1.5">
         {PALETTE.map((c) => (
@@ -33,7 +33,7 @@ export default function ColorPicker({ selected, onSelect, customColor, onCustomC
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label className="text-xs text-gray-500">Pick any</label>
+        <label className="text-xs text-gray-500">Custom color</label>
         <div className="flex items-center gap-2">
           <input
             type="color"
