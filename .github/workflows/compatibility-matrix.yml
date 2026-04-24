@@ -32,30 +32,42 @@ jobs:
             npm install -g pnpm 2>/dev/null
           fi
 
-      - name: Install SDK
+      - name: Install SDK packages
         run: |
           DIR=$(mktemp -d)
           cd "$DIR"
           npm init -y > /dev/null 2>&1
           if [ "${{ matrix.pm }}" = "npm" ]; then
             npm install stacks-pix-sdk --no-save --no-package-lock 2>/dev/null
+            npm install stacks-pix-analytics --no-save --no-package-lock 2>/dev/null
+            npm install stacks-pix-utils --no-save --no-package-lock 2>/dev/null
           elif [ "${{ matrix.pm }}" = "yarn" ]; then
             yarn add stacks-pix-sdk --no-lockfile 2>/dev/null || npm install stacks-pix-sdk --no-save 2>/dev/null
+            yarn add stacks-pix-analytics --no-lockfile 2>/dev/null || npm install stacks-pix-analytics --no-save 2>/dev/null
+            yarn add stacks-pix-utils --no-lockfile 2>/dev/null || npm install stacks-pix-utils --no-save 2>/dev/null
           elif [ "${{ matrix.pm }}" = "pnpm" ]; then
             pnpm add stacks-pix-sdk --no-lockfile 2>/dev/null || npm install stacks-pix-sdk --no-save 2>/dev/null
+            pnpm add stacks-pix-analytics --no-lockfile 2>/dev/null || npm install stacks-pix-analytics --no-save 2>/dev/null
+            pnpm add stacks-pix-utils --no-lockfile 2>/dev/null || npm install stacks-pix-utils --no-save 2>/dev/null
           fi
           echo "Install complete"
 
-      - name: Verify import
+      - name: Verify imports
         run: |
           DIR=$(mktemp -d)
           cd "$DIR"
           npm init -y > /dev/null 2>&1
           npm install stacks-pix-sdk --no-save --no-package-lock --quiet 2>/dev/null
-          node -e "const sdk = require('stacks-pix-sdk'); console.log('Module loaded:', typeof sdk);"
-          echo "Import verified on Node ${{ matrix.node }}"
+          node -e "const sdk = require('stacks-pix-sdk'); console.log('stacks-pix-sdk loaded:', typeof sdk);"
+          npm install stacks-pix-analytics --no-save --no-package-lock --quiet 2>/dev/null
+          node -e "const sdk = require('stacks-pix-analytics'); console.log('stacks-pix-analytics loaded:', typeof sdk);"
+          npm install stacks-pix-utils --no-save --no-package-lock --quiet 2>/dev/null
+          node -e "const sdk = require('stacks-pix-utils'); console.log('stacks-pix-utils loaded:', typeof sdk);"
+          echo "All imports verified on Node ${{ matrix.node }}"
 
       - name: Check package metadata
         run: |
           npm view stacks-pix-sdk version description 2>/dev/null
+          npm view stacks-pix-analytics version description 2>/dev/null
+          npm view stacks-pix-utils version description 2>/dev/null
           echo "Metadata check passed"
