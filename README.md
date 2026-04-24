@@ -2016,3 +2016,15 @@ Each pixel costs a small tx fee (~0.001 STX).
 
 **Can I overwrite someone else's pixel?**
 Yes, any pixel can be overwritten.
+
+
+## Deployment
+
+```bash
+cd frontend
+npm install
+npm run build
+npm start
+```
+
+Deployed via Vercel with root directory set to `frontend`.
