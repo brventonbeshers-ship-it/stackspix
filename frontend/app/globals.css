@@ -3595,3 +3595,10 @@ html { scroll-behavior: smooth; }
 }
 
 /* marker-globals: 1777059606272 */
+
+/* ─── Pulse border ─── */
+@keyframes pulseBorder {
+  0%, 100% { border-color: rgba(168,85,247,0.4); }
+  50%       { border-color: rgba(168,85,247,0.9); }
+}
+.pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
