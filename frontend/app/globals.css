@@ -3702,3 +3702,12 @@ html { scroll-behavior: smooth; }
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2);
 }
+
+/* ─── Canvas shadow ─── */
+.canvas-shadow {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 0 60px rgba(99, 102, 241, 0.08);
+}
+
+/* marker-globals: 1777100577051 */
