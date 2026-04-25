@@ -3749,3 +3749,11 @@ html { scroll-behavior: smooth; }
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
