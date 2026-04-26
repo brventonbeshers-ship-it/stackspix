@@ -2230,3 +2230,8 @@ npm start
 ```
 
 Deployed via Vercel with root directory set to `frontend`.
+
+
+## License
+
+MIT License.
