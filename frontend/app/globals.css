@@ -3825,3 +3825,10 @@ html { scroll-behavior: smooth; }
 .animate-slide-up { animation: slideUp 0.4s ease-out; }
 
 /* marker-globals: 1777166384132 */
+
+/* ─── Glass panel ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
