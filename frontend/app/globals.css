@@ -3914,3 +3914,10 @@ html { scroll-behavior: smooth; }
 /* marker-globals: 1777234800445 */
 
 /* marker-globals: 1777263398253 */
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
