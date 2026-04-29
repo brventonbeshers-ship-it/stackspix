@@ -3957,3 +3957,11 @@ html { scroll-behavior: smooth; }
 .text-glow-indigo {
   text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
 }
+
+/* ─── Color swatch glow ─── */
+.swatch-glow {
+  transition: box-shadow 0.15s ease;
+}
+.swatch-glow:hover {
+  box-shadow: 0 0 12px currentColor;
+}
