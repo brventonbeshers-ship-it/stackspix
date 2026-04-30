@@ -4008,3 +4008,10 @@ html { scroll-behavior: smooth; }
 .animate-slide-up { animation: slideUp 0.4s ease-out; }
 
 /* marker-globals: 1777584163214 */
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
