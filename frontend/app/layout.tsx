@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 export const metadata: Metadata = {
   title: 'StacksPix - On-chain Pixel Board',
-  description: 'On-chain pixel art on Stacks. Place, overwrite, and collect pixels permanently.',
+  description: 'Place pixels permanently on Stacks blockchain. Every pixel is a real on-chain transaction.',
   openGraph: {
     title: 'StacksPix',
     description: 'Place pixels permanently on Stacks blockchain.',
