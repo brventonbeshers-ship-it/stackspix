@@ -4025,3 +4025,9 @@ html { scroll-behavior: smooth; }
 /* marker-globals: 1777610542413 */
 
 /* marker-globals: 1777654105905 */
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
