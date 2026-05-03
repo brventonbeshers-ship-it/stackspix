@@ -4105,3 +4105,10 @@ html { scroll-behavior: smooth; }
   background: rgba(168, 85, 247, 0.3);
   color: #f5f3ff;
 }
+
+/* ─── Glass panel ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
